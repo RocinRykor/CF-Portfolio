@@ -1,0 +1,16 @@
+#nav-menu a {
+    text-decoration: none;
+  }
+
+#nav-menu ul {
+list-style: none;
+}
+
+#nav-menu ul li {
+  display: inline;
+  word-spacing: 40px;
+}
+
+#about-me {
+  word-spacing: 2px;
+}

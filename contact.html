@@ -1,52 +1,72 @@
 <!DOCTYPE html>
     <html>
+
         <head>
             <title>Steven Briggs</title>
             <link rel="icon" type="image/png" href="./img/favicon/favicon-32x32.png" sizes="32x32" />
+            <link rel="stylesheet" href="./css/styles.css">
         </head>
 
-        <header>
-            <img src="./img/logo/Resized Logo.png" alt="Main Logo">
-            <nav>
-                <a href="./index.html">Home</a>
-                <a href="./about.html">About</a>
-                <a href="./contact.html">Contact Me</a>
-            </nav>
-        </header>
-
         <body>
+            <header>
+                <img src="./img/logo/steven-briggs-logo-resized.png" alt="Text logo for Steven Briggs">
+                <nav  id="nav-menu">
+                    <ul role="menubar">
+                       <li role="presentation">
+                          <a href="index.html" role="menuitem">Home</a>
+                       </li>
+                       <li role="presentation">
+                          <a href="about.html" role="menuitem"><span id="about-me">About Me</span></a>
+                       </li>
+                      <li role="presentation">
+                          <a href="contact.html" role="menuitem">Contact</a>
+                       </li>
+                    </ul>
+                 </nav>
+            </header>
+
             <section>
                 <h1> Contact Me! </h1>
                 <p>Email: <a href="mailto:briggs.steven369@gmail.com">Briggs.Steven369@gmail.com</a></p>
-                <p>Telephone: <a href="tel:9716002201">(971) 600-2201</a></p>
+                <p>Telephone: <a href="tel:9716002201" aria-label="Nine. Seven. One. Six. Zero. Zero. Two. Two. Zero. One">(971) 600-2201</a></p>
             </section>
             <section>
-                <h4> Check out my Resume! </h4>
+                <h2> Check out my Resume! </h2>
                 <a href="#">Click here to download!</a>
             </section>
             <section>
-                <h4> Send Me A Quick Message! </h4>
+                <h3> Send Me A Quick Message! </h3>
                 <form action="" method="post">
-                    <label for="nameFirst">Name:</label>
-                    <input type="text" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email">
+                    <label class="standard-label" for="contact-name">* Name:</label>
+                    <input type="text" id="contact-name" required>
 
                     <br>
-                    <label for="message">Message: </label>
-                    <textarea name="messageArea" cols="30" rows="10"></textarea>
-                    <input type="submit" value="Send Message">
+                    <label class="standard-label" for="contact-telephone">Telephone: </label>
+                    <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-telephone">
+
+                    <br>
+                    <label class="standard-label" for="contact-email">* Email:</label>
+                    <input type="email" id="contact-email" required>
+
+                    <br>
+                    <label class="standard-label" for="contact-message">* Message: </label>
+                    <textarea name="messageArea" cols="30" rows="10" minlength="50" maxlength="300" id="contact-message"></textarea>
+
+                    <input type="submit" value="Send Message" required>
+
+                    <p>* = Required</p>
+
                 </form>
             </section>
-        </body>
-        <footer>
-            <section>
+
+            <footer>
                 <p>Find me on</p>
-                <a href="https://github.com/RocinRykor"><img src="./img/svg/4745725_code_development_github_open-source_programming_icon.svg" alt="Github" sizes="32x32"></a>
-                <a href="https://twitter.com/RocinRykor"></a><img src="./img/svg/5296516_tweet_twitter_twitter logo_icon.svg" alt="Twitter" sizes="32x32"></a>
-                <a href="https://www.linkedin.com/in/stevenbriggs369/"></a><img src="./img/svg/5296501_linkedin_network_linkedin logo_icon.svg" alt="LinkedIn" sizes="32x32"></a>
-              </section>
-        </footer>
-    </html>
+                <a href="https://github.com/RocinRykor"><img src="./img/svg/github.svg" alt="Link to Steven's Github page" sizes="32x32"></a>
+                <a href="https://twitter.com/RocinRykor"><img src="./img/svg/twitter.svg" alt="Link to Steven's Twitter Page" sizes="32x32"></a>
+                <a href="https://www.linkedin.com/in/stevenbriggs369/"><img src="./img/svg/linkedin.svg" alt="Link to Steven's LinkedIn profile" sizes="32x32"></a>
+            </footer>
+    
+            <script src="./js/tota11y.min.js"></script>
+        </body>
     </html>
