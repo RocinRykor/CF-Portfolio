@@ -1,6 +1,60 @@
-#nav-menu a {
-    text-decoration: none;
-  }
+body {
+  background-color: #bbb;
+
+  font-family: 'Dosis', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+a {
+  color: #049;
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+a:visited {
+  /* visited link */
+  color: #044;
+}
+
+a:active {
+  /* selected link */
+  color: #053;
+}
+
+button {
+  background-color: #044;
+  color: #fff;
+}
+
+#button-link {
+  color: #fff;
+}
+
+button:hover, button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.5;
+}
 
 #nav-menu ul {
 list-style: none;
