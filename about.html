@@ -12,70 +12,80 @@
         </head>
 
         <body>
-            <header>
-                <img src="./img/logo/steven-briggs-logo-resized.png" alt="Text logo for Steven Briggs">
-                <nav  id="nav-menu">
-                    <ul role="menubar">
-                       <li role="presentation">
-                          <a href="index.html" role="menuitem">Home</a>
-                       </li>
-                       <li role="presentation">
-                          <a href="about.html" role="menuitem"><span id="about-me">About Me</span></a>
-                       </li>
-                      <li role="presentation">
-                          <a href="contact.html" role="menuitem">Contact</a>
-                       </li>
+            <header class="page-header">
+                <img src="./img/logo/steven-briggs-logo-resized.png" alt="Text logo for Steven Briggs" class="page-header__item">
+                <nav class="main-navigation page-header__item">
+                    <ul role="menubar" class="navigation-list">
+                        <li role="presentation">
+                            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+                        </li >
+                        <li role="presentation">
+                            <a href="work.html" role="menuitem" class="navigation-list__item" aria-label="My Work">Work</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="about.html" role="menuitem" class="navigation-list__item" aria-label="About Me">About</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                        </li>
                     </ul>
-                 </nav>
+                </nav>
             </header>
             
-            <h1>About Me!</h1>
+            <main class="about-main">
+                <h1>About Me!</h1>
 
-            <p>
-                My name is Steven Briggs, I am 31 years old, currently living in Washington for the past several years after moving from Arizona.
-                <br>
-                Up until now I have been programming as a hobby, I am self-taught in Java and have been using it for the past 5 years. 
-                <br>
-                I am currently looking to branch out, extend my skills with other languages and make programming my career!
-            </p>
+                <p>
+                    My name is Steven Briggs, I am 31 years old, currently living in Washington for the past several years after moving from Arizona.
+                    <br>
+                    Up until now I have been programming as a hobby, I am self-taught in Java and have been using it for the past 5 years. 
+                    <br>
+                    I am currently looking to branch out, extend my skills with other languages and make programming my career!
+                </p>
 
-            <table style="width: 25%">
-                <thead>
-                    <td>Language</td>
-                    <td>Experience</td>
-                    <td>Level of Expertise</td>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Java</td>
-                        <td>5 Years</td>
-                        <td>Advanced
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>1 Year</td>
-                        <td>Beginner</td>
-                        </tr>
-                    <tr>
-                        <td>CSS</td>
-                        <td>Less than 1 Year</td>
-                        <td>Beginner</td>
-                        </tr>
-                    <tr>
-                        <td>HTML</td>
-                        <td>Less Than 1 Year</td>
-                        <td>Beginner
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                <section class="experience">
+                    <table class="experience-table">
+                        <thead>
+                            <td>Language</td>
+                            <td>Experience</td>
+                            <td>Level of Expertise</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Java</td>
+                                <td>5 Years</td>
+                                <td>Advanced
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Python</td>
+                                <td>1 Year</td>
+                                <td>Beginner</td>
+                                </tr>
+                            <tr>
+                                <td>CSS</td>
+                                <td>Less than 1 Year</td>
+                                <td>Beginner</td>
+                                </tr>
+                            <tr>
+                                <td>HTML</td>
+                                <td>Less Than 1 Year</td>
+                                <td>Beginner
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+            
               
-            <footer>
+            <footer class="page-footer">
                 <p>Find me on</p>
-                <a href="https://github.com/RocinRykor"><img src="./img/svg/github.svg" alt="Link to Steven's Github page" sizes="32x32"></a>
-                <a href="https://twitter.com/RocinRykor"><img src="./img/svg/twitter.svg" alt="Link to Steven's Twitter Page" sizes="32x32"></a>
-                <a href="https://www.linkedin.com/in/stevenbriggs369/"><img src="./img/svg/linkedin.svg" alt="Link to Steven's LinkedIn profile" sizes="32x32"></a>
+                <section class="social-media">
+                    <a href="https://github.com/RocinRykor"><img src="./img/svg/github.svg" alt="Link to Steven's Github page" sizes="32x32"></a>
+                    <a href="https://twitter.com/RocinRykor"><img src="./img/svg/twitter.svg" alt="Link to Steven's Twitter Page" sizes="32x32"></a>
+                    <a href="https://www.linkedin.com/in/stevenbriggs369/"><img src="./img/svg/linkedin.svg" alt="Link to Steven's LinkedIn profile" sizes="32x32"></a>
+                </section>
             </footer>
 
             <script src="./js/tota11y.min.js"></script>
