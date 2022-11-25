@@ -44,20 +44,34 @@ a:active {
   color: #053;
 }
 
-button {
-  background-color: #044;
+.button, button {
+  /* overwrites browser defaults */
+  /* resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* style button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 1s opacity;
+}
+
+.button:visited {
   color: #fff;
 }
 
-#button-link {
-  color: #fff;
-}
-
-button:hover, button:focus {
+button:hover, button:focus,
+.button:hover, .button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .profile_portrait {
@@ -118,7 +132,7 @@ main {
   text-align: center;
 }
 
-.project-list {
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
@@ -127,19 +141,84 @@ main {
 }
 
 /* start grid fallback */
-.project-list__item {
+.grid__item {
   display: inline-block;
   width: 33%;
  }
 
-.project-list__item {
+.grid__item {
   background-color: lightgray;
   width: auto;
   min-height: auto;
   margin: 0;
 }
 
-.project-list__item:last-child {
+.grid__item:last-child {
   grid-column: 3 / 3;
   grid-row: 1 / 3;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
