@@ -1,49 +1,18 @@
-/* 1 || Universal*/
-:root {
-    /* Steel Blue Pallete */
-    --dark: #1b3246;
-    --medium: #4682b4;
-    --light: #b2cce1;
+body {
+    background-color: #bbb;
 
-    --primary-accent: #b4af46;
-    --secondary-accent: #b4464b;
+    font-family: "Dosis", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    /* Sets the font size to 16px */
+    line-height: 1.6;
+    /* Sets the line-height to 1.6 */
 }
 
 * {
     box-sizing: border-box;
 }
 
-/* 2 || Document */
-html,
-body {
-    height: 100%;
-}
-/* 3 || Metadata */
-
-/* 4 || Sections */
-body {
-    /* Base || Colors*/
-    background-color: var(--light);
-    color: black;
-
-    /* || Fonts*/
-    font-family: "Dosis", sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    /* Sets the font size to 16px */
-    line-height: 1.6;
-    /* Sets the line-height to 1.6 */
-
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    text-align: center;
-    margin: 0 auto;
-}
-
-/* 5 || Headings */
 h1 {
     font-size: 30px;
     font-weight: 500;
@@ -55,14 +24,26 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 }
 
-/* 6 || Lists */
-/* 7 || Media */
+a {
+    color: #049;
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+}
 
-/* 8 || Forms */
+a:visited {
+    /* visited link */
+    color: #044;
+}
+
+a:active {
+    /* selected link */
+    color: #053;
+}
+
 .button,
 button {
     /* overwrites browser defaults */
@@ -72,7 +53,7 @@ button {
     /* takes the font from the outer container */
     font-family: inherit;
     /* style button */
-    background-color: var(--dark);
+    background-color: #357b70;
     border-radius: 3px;
     color: white;
     padding: 10px;
@@ -82,88 +63,20 @@ button {
     transition: 1s opacity;
 }
 
+.button:visited {
+    color: #fff;
+}
+
 button:hover,
 button:focus,
 .button:hover,
 .button:focus {
     /* lets the mouse appear as a hand when hovering over the button */
     cursor: pointer;
-    /* reduces the opacity of the button to 75% */
+    /* reduces the opacity of the button to 80% */
     opacity: 0.75;
 }
 
-/* 9 || Tables */
-
-/* 10 || Phrasing */
-a {
-    color: var(--secondary-trim);
-    /* No underlining when hovering over a link */
-    text-decoration: none;
-}
-
-a:hover {
-    background: var(--primary-accent);
-    color: black;
-}
-
-/* 11 || Misc. */
-
-/*12 || Attributes */
-/* Section || Page Header*/
-.page-header {
-    display: flex;
-    width: 100%;
-    padding: 20px;
-}
-
-.page-header__item {
-    flex: 0 1 200px;
-}
-
-.page-header__item:last-child {
-    flex-grow: 1;
-    text-align: right;
-}
-
-/* Page Header || Navigation*/
-.page-header {
-    background-color: var(--dark);
-    color: white;
-}
-
-.header-title {
-    font-size: 32px;
-    font-weight: 500;
-}
-
-.navigation-list {
-    list-style-type: none;
-}
-
-.navigation-list li {
-    display: inline-block;
-    margin-left: 15px;
-}
-
-.navlink {
-    font-size: 24px;
-}
-
-/* Section || Body */
-.content {
-    flex: 1 0 auto;
-}
-
-/* Section || Footer */
-.page-footer {
-    clear: both;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    flex-shrink: 0;
-}
-
-/* Main || Portrait */
 .profile_portrait {
     float: left;
     width: 250px;
@@ -171,7 +84,11 @@ a:hover {
     border-radius: 50%;
 }
 
-/* Main || Experience Table */
+main {
+    text-align: center;
+    margin: 0 auto;
+}
+
 .experience {
     text-align: center;
     margin: 0 auto;
@@ -187,7 +104,37 @@ a:hover {
     margin: 0 auto;
 }
 
-/* Main || Grids*/
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.navigation-list {
+    list-style-type: none;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -203,9 +150,7 @@ a:hover {
 }
 
 .grid__item {
-    background-color: var(--medium);
-    border-radius: 30px;
-    opacity: 100%;
+    background-color: lightgray;
     width: auto;
     min-height: auto;
     margin: 0;
@@ -216,7 +161,6 @@ a:hover {
     grid-row: 1 / 3;
 }
 
-/* Base || Media */
 @media all and (max-width: 500px) {
     .grid {
         grid-template-columns: 1fr;
@@ -238,4 +182,46 @@ a:hover {
     h1 {
         font-size: 22px;
     }
+}
+
+@keyframes color-change {
+    0% {
+        fill: #edc655;
+    }
+    50% {
+        fill: #fcffad;
+    }
+    100% {
+        fill: #f76414;
+    }
+}
+
+@keyframes cloud-move {
+    from {
+        transform: translate(0, 50px);
+    }
+    to {
+        transform: translate(200px, 50px);
+    }
+}
+
+@keyframes cloud-move-reverse {
+    from {
+        transform: translate(446px, 48px);
+    }
+    to {
+        transform: translate(100px, 48px);
+    }
+}
+
+.sun {
+    animation: 4s color-change infinite alternate linear;
+}
+
+.cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
 }
