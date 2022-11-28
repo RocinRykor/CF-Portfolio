@@ -1,6 +1,6 @@
 /* 1 || Universal*/
 :root {
-    /* Steel Blue Pallete */
+    /* Steel Blue Palette */
     --dark: #1b3246;
     --medium: #4682b4;
     --light: #b2cce1;
@@ -26,12 +26,14 @@ body {
 /* 4 || Sections */
 body {
     /* Base || Colors*/
+    background-color: #b2cce1;
     background-color: var(--light);
     color: black;
 
     /* || Fonts*/
     font-family: "Dosis", sans-serif;
     font-weight: 300;
+    font-size: 18px;
     font-size: var(--base-font-size);
     line-height: 1.6;
 
@@ -64,7 +66,24 @@ h3 {
 /* 7 || Media */
 
 /* 8 || Forms */
-.button,
+.button {
+    /* overwrites browser defaults */
+    /* resets the border */
+    border: none;
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* style button */
+    background-color: #1b3246;
+    background-color: var(--dark);
+    border-radius: 3px;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    /* width of the border, type, color */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition: 1s opacity;
+}
 button {
     /* overwrites browser defaults */
     /* resets the border */
@@ -73,6 +92,7 @@ button {
     /* takes the font from the outer container */
     font-family: inherit;
     /* style button */
+    background-color: #1b3246;
     background-color: var(--dark);
     border-radius: 3px;
     color: white;
@@ -97,12 +117,14 @@ button:focus,
 
 /* 10 || Phrasing */
 a {
+    color: undefined;
     color: var(--secondary-trim);
     /* No underlining when hovering over a link */
     text-decoration: none;
 }
 
 a:hover {
+    background: #b4af46;
     background: var(--primary-accent);
     color: black;
 }
@@ -128,6 +150,7 @@ a:hover {
 
 /* Page Header || Navigation*/
 .page-header {
+    background-color: #1b3246;
     background-color: var(--dark);
     color: white;
 }
@@ -142,6 +165,7 @@ a:hover {
 }
 
 .navlink {
+    font-size: 24px;
     font-size: var(--large-font-size);
 }
 
@@ -199,6 +223,7 @@ a:hover {
 }
 
 .grid__item {
+    background-color: #4682b4;
     background-color: var(--medium);
     border-radius: 30px;
     opacity: 100%;
