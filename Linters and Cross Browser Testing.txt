@@ -1,0 +1,13 @@
+Linters
+    HTML = HTMLHint w/ default settings
+    
+    CSS = Code OSS Inbuilt CSS Linter w/ default settings
+
+    No issues found or needed correcting.
+
+Cross Browser Testing:
+    No format errors that I could see between browers.
+
+    Loaded fine on Firefox, Chrome, Edge and Safari
+
+    The only issue I dealt with was a techincal issue related to the redirect I had set up for the site. I fixed it and now it appears to be working as intended.
